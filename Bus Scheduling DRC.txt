@@ -23,6 +23,7 @@ Upon completion of the manifest retrieval, a saga decides who to send survey mes
 INTERESTING(ISH) RABBIT SCENARIOS:
 
 To try and demonstrate the different ways that we could use EasyNetQ I've created a small demo suite of a message sender and a receiver which lets us subscribe with a variety of techniques, and send messages with topics for priority and length. Obviously Rabbit & EasyNetQ aren't interested in these ideas of high or low priority, and short or long running, so we have to try to code the sematics we want around them.
+The source for such hackery can be found at: https://github.com/toby-carter-15below/BusScheduling and binaries are in Q:\users\Toby\BusScheduling they are set to use a couple of queues on the 8A-QAT bus (due to the heritage of the initial bug) and I was to lazy to make it configurable, so different people checking it out simultaneously without hacking the code (which is very prototypey and low quality) could steal work from each other. 
 
 *1 IBus with multiple subscriptions*
 ** high & low sub, prefetch of 1 - interleave requests on the same thread
